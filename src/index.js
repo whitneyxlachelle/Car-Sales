@@ -7,9 +7,10 @@ import './styles.scss';
 
 import  { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { featureReducer } from './reducers/featureReducer';
 
 //createStore will take in a single reducer that represents the state of the application globally
-const store = createStore(reducer)
+const store = createStore(featureReducer)
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
