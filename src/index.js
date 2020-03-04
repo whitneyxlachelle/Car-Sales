@@ -5,5 +5,16 @@ import App from './App';
 import 'bulma/css/bulma.css';
 import './styles.scss';
 
+import  { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+//createStore will take in a single reducer that represents the state of the application globally
+const store = createStore(reducer)
+
 const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+<Provider store={store}>
+<App />
+</Provider>,
+ rootElement
+ );
